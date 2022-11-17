@@ -28,10 +28,11 @@ const App = () => {
 
 		async function authWithAPI() {
 			try {
-				console.log(location.search);
+				console.log('params', location.search);
 				const response = await fetch(
 					'https://localhost:3000/' + location.search
 				)
+				console.log(response)
 			} catch (e) {
 				console.error('Ошибка авторизации', e);
 			}
